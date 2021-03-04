@@ -10,7 +10,7 @@
 int main(int argc, char** argv) {
 	setlocale(LC_ALL, "Portugueses");
 	
-	//Tipos variaveis
+	//variaveis 1
 	char professor[30] = {"Kleber Bambam"};
 	char personal = 's' ;
 	int periodo = 1;
@@ -50,23 +50,24 @@ int main(int argc, char** argv) {
 	system("cls");
 	
 	
-	// Entrada de dados
+	
+	
+	//variaveis
 	char aluno[30];//[30] -> maximo de 30 caracteres
 	char sexo;
 	int idade;
 	float peso,altura,imc;
 	
 	
-	//entrada de dados
+	//ENTRADA DE DADOS
 	printf("Cadastro De Aluno\n");
 	printf("_______________________________________\n");
 	printf("Nome do aluno: ");
 	//comando gets é usado especificamento para capturar String (char[])
 	gets(aluno);
 	printf ("Sexo(M/F):");
-	//processamento
 	// o comando scanf é usado para capturar os demias variavies
-	//q o simbolo &(amper) é usado para referencia de memoria
+	// o simbolo &(amper) é usado para referencia de memoria
 	scanf("%c",&sexo);	
 	printf("Idade: ");
 	scanf("%d", &idade);
@@ -75,15 +76,23 @@ int main(int argc, char** argv) {
 	// ATENÇÃO!	Para capturar um numero não inteiro usar (,) virgula
 	printf("Altura(m): ");
 	scanf("%f", &altura);
+	//PROCESSAMENTO
+	imc=peso / (altura*altura);
+	//SAIDA
+	printf("IMC: %.2f\n");
+	//STATUS DE ACORDO COM A TABELA DO IMC
+	if (imc < 17){
+		printf("Muito abaixo do peso\n");
+	} else if (imc <18.5){
+		printf("Abaixo do peso\n");
+	}
 	
-	/*printf("imc:")
-	scanf("")
-	printf("\n");
+
 	system("pause");
 	system("cls");
-	printf("ficha do aluno\n");
-	*/
 	
+	
+	printf("ficha do aluno\n");
 	printf("_______________________________________\n");	
 	printf("\n");
 	printf("Aluno: %s\n", aluno);

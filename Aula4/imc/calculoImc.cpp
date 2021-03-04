@@ -31,6 +31,22 @@ int main(int argc, char** argv) {
 	imc=peso / (altura * altura);
 	//saída
 	printf("IMC: %.2f\n\n", imc);
+	//status de acordo com a tabela do IMC
+	if (imc < 17){
+		printf("Muito abaixo do peso\n");
+	} else if (imc < 18.5){
+		printf("Abaixo do peso\n");
+	} else if (imc < 25.0){
+		printf("Peso normal\n");
+	} else if (imc < 30.0){
+		printf("Acima do peso\n");
+	} else if (imc < 35.0){
+		printf("Obesidade I\n");
+	} else if (imc < 40.0){
+		printf("Obesidade II\n");
+	} else {
+		printf("Obesidade III\n");
+	}
 	printf("_______________________________________\n");
 	
 	system("pause");
